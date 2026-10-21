@@ -101,7 +101,7 @@ func (app *application) readJSON(w http.ResponseWriter, r *http.Request, dst int
 		case errors.As(err, &invalidUnmarshalError):
 			panic(err)
 
-		// For anything else, return the error message as-is.
+		// For anything else, return the error message as-it-is.
 		default:
 			return err
 		}
