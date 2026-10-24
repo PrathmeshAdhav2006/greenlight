@@ -38,6 +38,8 @@ func (r *Runtime) UnmarshalJSON(jsonValue []byte) error {
 		return ErrInvalidRuntimeFormat
 	}
 
+	// Split the unquoted string into two parts using a space as the delimiter. The first part should be the runtime value,
+	// and the second part should be the "mins" string.
 	parts := strings.Split(unquotedJSONValue, " ")
 
 	if len(parts) != 2 || parts[1] != "mins" {
