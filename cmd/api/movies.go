@@ -8,6 +8,7 @@ import (
 	"github.com/PrathmeshAdhav2006/greenlight/internal/data"
 )
 
+// createMovieHandler is the handler for the "POST /v1/movies" endpoint. It reads the information for a new movie from the request body, creates a new Movie struct, and then writes it back in the response.
 func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Request) {
 
 	var input struct {
